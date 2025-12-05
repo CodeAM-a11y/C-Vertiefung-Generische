@@ -3,6 +3,14 @@
     public class QuestSammlung
     {
         public List<Quest> ListeQuests { get; set; } = new List<Quest>();
+        public void QuestsAuflisten()
+        {
+            Console.WriteLine($"Noch zu erledigende Quests: ");
+            foreach (Quest item in ListeQuests)
+            {
+                if (item.QuestErledigt == false) { Console.WriteLine($"{item.name} Beschreibung: {item.Beschreibung}"); }
+            }
+        }
     }
     public class Quest
     {
@@ -72,6 +80,9 @@
             Item nahrung = new Item("Brot der Stadt","nahrung");
             Quest ersteQuest = new Quest("Vorräte klauen", "Du musst Vorräte klauen", nahrung, "TürÖffnen");
             Hobbit h1 = new Hobbit("Frodo");
+            q1.ListeQuests.Add(DieWache);
+            q1.ListeQuests.Add(ersteQuest);
+            q1.QuestsAuflisten();
             h1.AufgabeErledigen(ersteQuest);
             h1.AufgabeErledigen(DieWache);
         }

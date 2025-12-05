@@ -35,14 +35,15 @@
             int counter = 0;
             int ZuTeilenLänge = StapelZuTeilen.Count;
             List<Stack<string>> liste = new List<Stack<string>>(); //
-            for(int i=0;i< anzahlS-1; i++)
+            for(int i=0;i< anzahlS; i++)
             {
                 liste.Add(new Stack<string>());
-                for(int x = 0; x < ZuTeilenLänge / (anzahlS-1); x++)
+                for(int x = 0; x < ZuTeilenLänge / anzahlS; x++)
                 {
                     liste[i].Push(StapelZuTeilen.Pop());
                 }
             }
+            if (StapelZuTeilen.Count > 0) { liste[anzahlS - 1].Push(StapelZuTeilen.Pop()); }
             return liste;
         }
         public void DeckAusgeben(Stack<string> anzeigenDeck)
