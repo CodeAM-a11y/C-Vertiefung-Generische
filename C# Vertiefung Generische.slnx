@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="BauMarkt/BauMarkt.csproj" />
+  <Project Path="C# Vertiefung Generische/C# Vertiefung Generische.csproj" />
+  <Project Path="HotelZimmer_Aufgabe/HotelZimmer_Aufgabe.csproj" />
+  <Project Path="JobListe/JobListe.csproj" />
+  <Project Path="Kartenspiel/Kartenspiel.csproj" Id="43c38784-6cf7-4cec-9e4e-b2ad24ebdd66" />
+  <Project Path="QuestDictionary/QuestDictionary.csproj" Id="40a4414a-b6d6-459e-9cc4-f4905fb659d7" />
+</Solution>
